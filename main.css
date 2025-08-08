@@ -3,17 +3,48 @@
     box-sizing: border-box;
 }
 
+#navbar {
+    padding: 1vw 0;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+
 #logoimg {
-    height: 10vw;
-    width: 10vw;
-    padding: 2vw;
+    height: 4.5vw;
+    width: 4.5vw;
+    padding: 0.5vw;
 }
 
-#logo, #icon-link {
-    align-items: center;
+
+.navbar-brand {
+    font-family: 'Lovelo', sans-serif;
+    font-size: 1.75vw !important;
+    font-weight: 900;
+    color: #000;
 }
 
-#icon-link {
-    padding: 2vw;
+.nav-link {
+    color: #000;
+    font-family: 'Lovelo', sans-serif !important;
+    font-weight: 900 !important;
+    transition: color 0.3s;
+    font-size: 1.2vw !important;
+
 }
+
+.nav-link:hover {
+    color: #0307af !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    #logoimg {
+        height: 8vw;
+        width: 8vw;
+    }
+    .navbar-brand {
+        font-size: 4vw !important;
+    }
+}
+
 
