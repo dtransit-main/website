@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#navbar {
+    padding: 1vw 0;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+
+#logoimg {
+    height: 4.5vw;
+    width: 4.5vw;
+    padding: 0.5vw;
+}
+
+
+.navbar-brand {
+    font-family: 'Lovelo', sans-serif;
+    font-size: 1.75vw !important;
+    font-weight: 900;
+    color: #000;
+}
+
+.nav-link {
+    color: #000;
+    font-family: 'Lovelo', sans-serif !important;
+    font-weight: 900 !important;
+    transition: color 0.3s;
+    font-size: 1.2vw !important;
+
+}
+
+.nav-link:hover {
+    color: #0307af !important;
+}
+
+#intro {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0; /* remove Bootstrap's row spacing */
+    --bs-gutter-x: 0; /* removes Bootstrap’s horizontal gutters */
+}
+
+/* Video fills the entire intro */
+#main-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+/* Semi-transparent dark overlay that covers the *whole* video */
+#video-opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65); /* adjust opacity to taste */
+    z-index: 1;
+}
+
+/* Text content on top */
+#video-text {
+    position: absolute; /* sits above overlay & video */
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+}
+
+#video-header-text {
+    font-family: 'Lovelo', sans-serif;
+    font-weight: 900;
+    font-size: 5vw;
+}
+
+#video-body-text {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.2vw;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    #logoimg {
+        height: 8vw;
+        width: 8vw;
+    }
+    .navbar-brand {
+        font-size: 8vw !important;
+    }
+    .nav-item {
+        font-size: 7vw;
+    }
+}
+
+
