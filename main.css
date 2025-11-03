@@ -338,6 +338,10 @@
         text-align: center;
     }
 
+    #video-header-text {
+        font-size: 8vw;
+    }
+
     /* About Section */
     #about {
         padding: 40px 8%;
@@ -406,6 +410,10 @@
 @media (max-width: 576px) {
     body {
         font-size: 4vw;
+    }
+
+    #video-header-text {
+        font-size: 8vw;
     }
 
     .navbar-brand {
