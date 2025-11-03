@@ -269,6 +269,54 @@
     border: 2px solid #0307af;
 }
 
+/* ---------- Contact Section ---------- */
+#contact {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 60px 5%;
+    border-top: 1px solid #ddd;
+}
+
+#contact h1 {
+    font-family: 'Lovelo', sans-serif;
+    font-size: 4vw;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+#contact p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900; /* Semi-Bold */
+    font-size: 2vw;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: #0307af;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0;
+    border-top: 3px solid #00008b;
+}
+
+footer p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.2vw;
+    margin: 0;
+}
 
 
 @media (max-width: 1200px) {
@@ -318,6 +366,10 @@
         width: 25vw;
         height: 5vw;
         font-size: 1.8vw;
+    }
+    #contact p {
+        font-size: 2.3vw;
+        padding: 0 30px;
     }
 }
 
@@ -404,12 +456,33 @@
         height: 9vw;
         font-size: 3.5vw;
     }
+    #contact h1 {
+        font-size: 6vw;
+    }
+    #contact p {
+        font-size: 3vw;
+        padding: 0;
+    }
+
+    footer p {
+        font-size: 2.5vw;
+    }
 }
 
 /* ---------- Mobile (Bootstrap “sm” and smaller) ---------- */
 @media (max-width: 576px) {
     body {
         font-size: 4vw;
+    }
+
+    /* Make the intro video section shorter on mobile */
+    #intro {
+        height: 70vh; /* was 95vh — reduced for mobile */
+    }
+
+    #main-bg-video,
+    #video-opacity {
+        height: 70vh; /* match intro height */
     }
 
     #video-header-text {
@@ -457,6 +530,22 @@
         width: 70vw;
         height: 12vw;
         font-size: 4.5vw;
+    }
+
+    #contact {
+        padding: 40px 6%;
+    }
+
+    #contact h1 {
+        font-size: 7vw;
+    }
+    
+    #contact p  {
+        font-size: 4vw;
+    }
+
+    footer p {
+        font-size: 3.5vw;
     }
 }
 

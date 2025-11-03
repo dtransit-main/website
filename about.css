@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#navbar {
+    padding: 1vw 0;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+
+#logoimg {
+    height: 4.5vw;
+    width: 4.5vw;
+    padding: 0.5vw;
+}
+
+
+.navbar-brand {
+    font-family: 'Lovelo', sans-serif;
+    font-size: 2vw !important;
+    font-weight: 900;
+    color: #000;
+}
+
+.nav-link {
+    color: #000;
+    font-family: 'Lovelo', sans-serif !important;
+    font-weight: 900 !important;
+    transition: color 0.3s;
+    font-size: 1.5vw !important;
+
+}
+
+.nav-link:hover {
+    color: #0307af !important;
+}
+
+#about-header {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding-top: 3vw;
+}
+
+#about-header p {
+    font-family: 'Lovelo', sans-serif;
+    font-size: 4vw;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+footer {
+    background-color: #0307af;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0;
+    border-top: 3px solid #00008b;
+}
+
+footer p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.2vw;
+    margin: 0;
+}
+
+
+
+@media (max-width: 1200px) {
+    #logoimg {
+        height: 6vw;
+        width: 6vw;
+    }
+
+    .navbar-brand {
+        font-size: 3.5vw !important;
+    }
+
+    .nav-link {
+        font-size: 2vw !important;
+    }
+}
+
+/* ---------- Mobile (Bootstrap “sm” and smaller) ---------- */
+@media (max-width: 576px) {
+    body {
+        font-size: 4vw;
+    }
+
+    #video-header-text {
+        font-size: 8vw;
+    }
+
+    .navbar-brand {
+        font-size: 7vw !important;
+    }
+    footer p {
+        font-size: 3.5vw;
+    }
+}
+
+
