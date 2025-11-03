@@ -18,7 +18,7 @@
 
 .navbar-brand {
     font-family: 'Lovelo', sans-serif;
-    font-size: 1.75vw !important;
+    font-size: 2vw !important;
     font-weight: 900;
     color: #000;
 }
@@ -28,7 +28,7 @@
     font-family: 'Lovelo', sans-serif !important;
     font-weight: 900 !important;
     transition: color 0.3s;
-    font-size: 1.2vw !important;
+    font-size: 1.5vw !important;
 
 }
 
@@ -39,7 +39,7 @@
 #intro {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     overflow: hidden;
     margin: 0; /* remove Bootstrap's row spacing */
     --bs-gutter-x: 0; /* removes Bootstrap horizontal gutters */
@@ -51,7 +51,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 95%;
     object-fit: cover;
     object-position: center;
     z-index: 0;
@@ -63,9 +63,18 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 95%;
     background: rgba(0, 0, 0, 0.65); /* adjust opacity as needed */
     z-index: 1;
+}
+
+#video-credit-text {
+  position: absolute;
+  top: 10px;      /* distance from top */
+  right: 15px;    /* distance from right */
+  z-index: 3;     /* higher than #video-opacity and #main-bg-video */
+  color: #f1f1f1; /* visible text color */
+  font-size: 1.2vw;
 }
 
 /* Text content on top of video and overlay */
@@ -83,14 +92,144 @@
 #video-header-text {
     font-family: 'Lovelo', sans-serif;
     font-weight: 900;
-    font-size: 5vw;
+    font-size: 6vw;
+    padding-bottom: 30px;
 }
 
-#video-body-text {
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
+#video-credit-text {
     font-size: 1.2vw;
 }
+
+#about {
+    padding: 5px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+#about p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900; /* Semi-Bold */
+    font-size: 2vw;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#about-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-button {
+    background-color: #0307af;
+    color: white;
+    border: none;
+    font-family: 'Lovelo', sans-serif;
+    font-weight: 900;
+    font-size: 1.5vw;
+    vertical-align: middle;
+    width: 20vw;
+    height: 4vw;
+    transition: color 0.3s, background-color 0.3s, border 0.3s;
+    border-radius: 10px;
+}
+
+#about-button:hover {
+    background-color: white;
+    color: #0307af;
+    border: 2px solid #0307af;
+}
+
+#videos {
+    padding: 60px 5%;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#videos h1 {
+    font-family: 'Lovelo', sans-serif;
+    font-size: 4vw;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+/* layout container */
+#videos-bootstrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* --- Row 2: video1 + video2 --- */
+#top-videos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.video-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 560px; /* consistent width for all */
+    max-width: 100%;
+}
+/* labels */
+.video-block p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.2vw;
+    margin-bottom: 10px;
+}
+
+.video-block iframe {
+    width: 100%;
+    height: calc(560px * 9 / 16); /* fixed ratio height */
+    max-width: 100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* --- Row 3: video 3 --- */
+#bottom-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 560px; /* match top videos */
+    max-width: 100%;
+}
+
+/* --- Row 4: button --- */
+#video-button {
+    display: flex;
+    justify-content: center;
+}
+
+#video-button button {
+    background-color: #0307af;
+    color: white;
+    border: none;
+    font-family: 'Lovelo', sans-serif;
+    font-weight: 900;
+    font-size: 1.3vw;
+    width: 20vw;
+    height: 4vw;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+#video-button button:hover {
+    background-color: white;
+    color: #0307af;
+    border: 2px solid #0307af;
+}
+
+
 
 
 /* Responsive adjustments */
@@ -104,6 +243,30 @@
     }
     .nav-item {
         font-size: 7vw;
+    }
+    #videos h1 {
+        font-size: 8vw;
+        margin-bottom: 30px;
+    }
+    .video-block p {
+        font-size: 3.5vw;
+    }
+    .video-block iframe {
+        max-width: 90vw;
+    }
+    #video-button button {
+        width: 60vw;
+        height: 10vw;
+        font-size: 4vw;
+    }
+
+    .video-block,
+    #bottom-video {
+        width: 90vw;
+    }
+
+    .video-block iframe {
+        height: calc(90vw * 9 / 16);
     }
 }
 
