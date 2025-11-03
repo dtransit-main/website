@@ -229,44 +229,226 @@
     border: 2px solid #0307af;
 }
 
+#blog {
+    display: flex;
+    justify-content: space-between; /* text left, button right */
+    align-items: center;             /* vertically center */
+    padding: 60px 5%;
+    background-color: #fff;          /* consistent with site background */
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;                 /* allow stacking on small screens */
+}
+
+#blog p {
+    flex: 1;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+    font-size: 1.8vw;
+    margin: 0;
+    max-width: 70%;
+    color: #000;
+}
+
+#blog button {
+    background-color: #0307af;
+    color: white;
+    border: none;
+    font-family: 'Lovelo', sans-serif;
+    font-weight: 900;
+    font-size: 1.5vw;
+    width: 20vw;
+    height: 4vw;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+#blog button:hover {
+    background-color: white;
+    color: #0307af;
+    border: 2px solid #0307af;
+}
 
 
 
-/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #logoimg {
+        height: 6vw;
+        width: 6vw;
+    }
+
+    .navbar-brand {
+        font-size: 3.5vw !important;
+    }
+
+    .nav-link {
+        font-size: 2vw !important;
+    }
+
+    #about p {
+        font-size: 2.3vw;
+        padding: 0 30px;
+    }
+
+    #about-button {
+        width: 25vw;
+        height: 5vw;
+        font-size: 1.8vw;
+    }
+
+    #videos h1 {
+        font-size: 5vw;
+    }
+
+    .video-block p {
+        font-size: 1.8vw;
+    }
+
+    #video-button button {
+        width: 25vw;
+        height: 5vw;
+        font-size: 1.8vw;
+    }
+
+    #blog p {
+        font-size: 2vw;
+    }
+
+    #blog button {
+        width: 25vw;
+        height: 5vw;
+        font-size: 1.8vw;
+    }
+}
+
+/* ---------- Tablet view (Bootstrap “md” and smaller) ---------- */
 @media (max-width: 992px) {
+    /* Navbar */
     #logoimg {
         height: 8vw;
         width: 8vw;
     }
+
     .navbar-brand {
-        font-size: 8vw !important;
+        font-size: 6vw !important;
     }
-    .nav-item {
-        font-size: 7vw;
+
+    .nav-link {
+        font-size: 4vw !important;
+        text-align: center;
     }
-    #videos h1 {
-        font-size: 8vw;
-        margin-bottom: 30px;
+
+    /* About Section */
+    #about {
+        padding: 40px 8%;
     }
-    .video-block p {
+
+    #about p {
+        font-size: 3vw;
+        padding: 0;
+    }
+
+    #about-button {
+        width: 50vw;
+        height: 9vw;
         font-size: 3.5vw;
     }
-    .video-block iframe {
-        max-width: 90vw;
+
+    /* Videos Section */
+    #videos {
+        padding: 40px 5%;
     }
+
+    #videos h1 {
+        font-size: 6vw;
+    }
+
+    .video-block {
+        width: 100%;
+    }
+
+    .video-block iframe {
+        width: 100%;
+        height: calc(100vw * 9 / 16);
+    }
+
+    .video-block p {
+        font-size: 3vw;
+    }
+
     #video-button button {
-        width: 60vw;
-        height: 10vw;
+        width: 50vw;
+        height: 9vw;
+        font-size: 3.5vw;
+    }
+
+    /* Blog Section */
+    #blog {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        padding: 40px 8%;
+    }
+
+    #blog p {
+        max-width: 100%;
+        font-size: 3vw;
+    }
+
+    #blog button {
+        width: 50vw;
+        height: 9vw;
+        font-size: 3.5vw;
+    }
+}
+
+/* ---------- Mobile (Bootstrap “sm” and smaller) ---------- */
+@media (max-width: 576px) {
+    body {
         font-size: 4vw;
     }
 
-    .video-block,
-    #bottom-video {
-        width: 90vw;
+    .navbar-brand {
+        font-size: 7vw !important;
     }
 
-    .video-block iframe {
-        height: calc(90vw * 9 / 16);
+    #about p {
+        font-size: 4vw;
+    }
+
+    #about-button {
+        width: 70vw;
+        height: 12vw;
+        font-size: 4.5vw;
+    }
+
+    #videos h1 {
+        font-size: 7vw;
+    }
+
+    .video-block p {
+        font-size: 4vw;
+    }
+
+    #video-button button {
+        width: 70vw;
+        height: 12vw;
+        font-size: 4.5vw;
+    }
+
+    #blog {
+        padding: 30px 6%;
+        gap: 30px;
+    }
+
+    #blog p {
+        font-size: 4vw;
+    }
+
+    #blog button {
+        width: 70vw;
+        height: 12vw;
+        font-size: 4.5vw;
     }
 }
 
