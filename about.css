@@ -48,7 +48,20 @@
     font-weight: 900;
     text-align: center;
     margin-bottom: 50px;
-    color: #000;
+    color: #0307af;
+}
+
+#about-text {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#about-text p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.75vw;
+    font-weight: 900;
+    text-align: center;
+    padding: 7vw;
 }
 
 footer {
@@ -84,8 +97,51 @@ footer p {
     }
 }
 
+@media (max-width: 992px) {
+    #logoimg {
+        height: 8vw;
+        width: 8vw;
+    }
+
+    .navbar-brand {
+        font-size: 6vw !important;
+    }
+
+    .nav-link {
+        font-size: 4vw !important;
+        text-align: center;
+    }
+    #about-header p {
+        font-size: 6vw; /* slightly larger for smaller screens */
+        margin-bottom: 30px;
+    }
+
+    #about-text p {
+        font-size: 2.5vw;
+        padding: 5vw;
+    }
+}
+
 /* ---------- Mobile (Bootstrap “sm” and smaller) ---------- */
 @media (max-width: 576px) {
+    #about-header {
+        padding-top: 8vw;
+    }
+
+    #about-header p {
+        font-size: 8vw;
+        margin-bottom: 20px;
+    }
+    .navbar-brand {
+        font-size: 7vw !important;
+    }
+
+    #about-text p {
+        font-size: 4vw;
+        font-weight: 700;
+        padding: 6vw 4vw;
+        text-align: justify; /* improves readability on mobile */
+    }
     body {
         font-size: 4vw;
     }
