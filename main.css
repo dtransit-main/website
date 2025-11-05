@@ -269,6 +269,30 @@
     border: 2px solid #0307af;
 }
 
+.blog-btn-link {
+  display: inline-block;
+  background-color: #0307af;
+  color: white !important;
+  border: none;
+  font-family: 'Lovelo', sans-serif;
+  font-weight: 900;
+  font-size: 1.5vw;
+  width: 20vw;
+  height: 4vw;
+  line-height: 4vw;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.blog-btn-link:hover {
+  background-color: white;
+  color: #0307af !important;
+  border: 2px solid #0307af;
+}
+
+
 /* ---------- Contact Section ---------- */
 #contact {
     background-color: #f8f8f8;
@@ -320,6 +344,12 @@ footer p {
 
 
 @media (max-width: 1200px) {
+    .blog-btn-link {
+        width: 25vw;
+        height: 5vw;
+        font-size: 1.8vw;
+        line-height: 5vw;
+    }
     #logoimg {
         height: 6vw;
         width: 6vw;
@@ -376,6 +406,12 @@ footer p {
 /* ---------- Tablet view (Bootstrap “md” and smaller) ---------- */
 @media (max-width: 992px) {
     /* Navbar */
+    .blog-btn-link {
+        width: 50vw;
+        height: 9vw;
+        font-size: 3.5vw;
+        line-height: 9vw;
+    }
     #logoimg {
         height: 8vw;
         width: 8vw;
@@ -471,6 +507,12 @@ footer p {
 
 /* ---------- Mobile (Bootstrap “sm” and smaller) ---------- */
 @media (max-width: 576px) {
+    .blog-btn-link {
+        width: 70vw;
+        height: 12vw;
+        font-size: 4.5vw;
+        line-height: 12vw;
+    }
     body {
         font-size: 4vw;
     }
