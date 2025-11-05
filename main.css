@@ -229,68 +229,50 @@
     border: 2px solid #0307af;
 }
 
-#blog {
-    display: flex;
-    justify-content: space-between; /* text left, button right */
-    align-items: center;             /* vertically center */
-    padding: 60px 5%;
-    background-color: #fff;          /* consistent with site background */
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    flex-wrap: wrap;                 /* allow stacking on small screens */
-}
+    #blog {
+        display: flex;
+        justify-content: space-between; /* text left, button right */
+        align-items: center;             /* vertically center */
+        padding: 60px 5%;
+        background-color: #fff;          /* consistent with site background */
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        flex-wrap: wrap;                 /* allow stacking on small screens */
+    }
 
-#blog p {
-    flex: 1;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 900;
-    font-size: 1.8vw;
-    margin: 0;
-    max-width: 70%;
-    color: #000;
-}
+    #blog p {
+        flex: 1;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 900;
+        font-size: 1.8vw;
+        margin: 0;
+        max-width: 70%;
+        color: #000;
+    }
 
-#blog button {
-    background-color: #0307af;
-    color: white;
-    border: none;
-    font-family: 'Lovelo', sans-serif;
-    font-weight: 900;
-    font-size: 1.5vw;
-    width: 20vw;
-    height: 4vw;
-    border-radius: 10px;
-    transition: all 0.3s;
-}
+    /* Link styled as button (matches all other buttons) */
+    #blog-button {
+        display: inline-block;
+        background-color: #0307af;
+        color: white;
+        border: none;
+        font-family: 'Lovelo', sans-serif;
+        font-weight: 900;
+        font-size: 1.5vw;
+        width: 20vw;
+        height: 4vw;
+        line-height: 4vw; /* centers text vertically */
+        border-radius: 10px;
+        text-decoration: none;
+        text-align: center;
+        transition: all 0.3s;
+    }
 
-#blog button:hover {
-    background-color: white;
-    color: #0307af;
-    border: 2px solid #0307af;
-}
-
-.blog-btn-link {
-  display: inline-block;
-  background-color: #0307af;
-  color: white !important;
-  border: none;
-  font-family: 'Lovelo', sans-serif;
-  font-weight: 900;
-  font-size: 1.5vw;
-  width: 20vw;
-  height: 4vw;
-  line-height: 4vw;
-  text-align: center;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-.blog-btn-link:hover {
-  background-color: white;
-  color: #0307af !important;
-  border: 2px solid #0307af;
-}
+    #blog-button:hover {
+        background-color: white;
+        color: #0307af;
+        border: 2px solid #0307af;
+    }
 
 
 /* ---------- Contact Section ---------- */
@@ -344,6 +326,16 @@ footer p {
 
 
 @media (max-width: 1200px) {
+    #blog p {
+        font-size: 2vw;
+    }
+
+    #blog-button {
+        width: 25vw;
+        height: 5vw;
+        font-size: 1.8vw;
+        line-height: 5vw;
+    }
     .blog-btn-link {
         width: 25vw;
         height: 5vw;
@@ -405,6 +397,24 @@ footer p {
 
 /* ---------- Tablet view (Bootstrap “md” and smaller) ---------- */
 @media (max-width: 992px) {
+    #blog {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        padding: 40px 8%;
+    }
+
+    #blog p {
+        max-width: 100%;
+        font-size: 3vw;
+    }
+
+    #blog-button {
+        width: 50vw;
+        height: 9vw;
+        font-size: 3.5vw;
+        line-height: 9vw;
+    }
     /* Navbar */
     .blog-btn-link {
         width: 50vw;
@@ -507,6 +517,21 @@ footer p {
 
 /* ---------- Mobile (Bootstrap “sm” and smaller) ---------- */
 @media (max-width: 576px) {
+    #blog {
+        padding: 30px 6%;
+        gap: 30px;
+    }
+
+    #blog p {
+        font-size: 4vw;
+    }
+
+    #blog-button {
+        width: 70vw;
+        height: 12vw;
+        font-size: 4.5vw;
+        line-height: 12vw;
+    }
     .blog-btn-link {
         width: 70vw;
         height: 12vw;
